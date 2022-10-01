@@ -8,8 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
-    <canvas class='whiteboard'>
+     <div style="width: 600px; height: 550px;" id="wt-container"></div>
+
+    <script src="https://www.whiteboard.team/dist/api.js"></script>
+    <script type="text/javascript">
+        var wt = new api.WhiteboardTeam('#wt-container', {
+            clientId: '<your clientId>',
+            boardCode: '<board code>'
+        });
+    </script>
+    
         
     </canvas>
 </body>
